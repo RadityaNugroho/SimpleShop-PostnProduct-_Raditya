@@ -10,11 +10,7 @@
 
 @section('content')
     @auth
-        <div class="d-flex mb-4">
-            <a href="{{ route('product.create') }}" type="button" class="ms-auto btn btn-primary">
-                Tambah
-            </a>
-        </div>
+        
     @endauth
 
     <table id="exampleTable">
@@ -32,7 +28,7 @@
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $item->name }}</td>
                     <td class="d-flex">
-                            <a href="{{ route('category.detail', $item->id) }}" type="button" class="btn btn-primary me-3">Edit</a>
+                            <a href="{{ route('category.detail', $item->id) }}" type="button" class="btn btn-primary me-3">Detail</a>
                         
                     </td>
                 </tr>

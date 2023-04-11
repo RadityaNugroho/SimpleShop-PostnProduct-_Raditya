@@ -14,5 +14,16 @@ class CategoryController extends Controller
         $categories = Category::all();
         return view('category.index',compact('categories'));
     }
+
+
+    public function detail(Request $request, $id)
+    {
+        
+        $category = Category::find($id);
+        return view('category.detail', compact('category'));
+    }
+
+
    
 }
+   

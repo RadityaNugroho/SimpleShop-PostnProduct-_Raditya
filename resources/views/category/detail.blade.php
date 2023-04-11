@@ -17,7 +17,6 @@
         <input type="text" value="{{ $category->name }}" class="form-control" disabled>
     </div>
 
-    @if($category->fkProduct != null)
     <table id="exampleTable">
         <thead>
             <tr>
@@ -35,6 +34,8 @@
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->price }}</td>
                     <td>{{ $item->stocks }}</td>
+                    <td> {{ $item->fkProductDetail->unit}}</td>
+                    <td> {{ $item->fkProductDetail->brand}}</td>
                     <td>
                         @if ($item->photo != null)
                             <div style="width:200px">
@@ -48,9 +49,7 @@
             @endforeach
         </tbody>
     </table>
-@else
-<p> data product kosong</p>
-@endif
+
 @endsection
 
 @section('js')
