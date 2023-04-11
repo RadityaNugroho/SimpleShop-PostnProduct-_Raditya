@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Auth;
@@ -47,3 +47,7 @@ Route::get('/post/edit/{id}', [PostController::class,'edit'])->name('post.edit')
 Route::put('/post/update/{id}', [PostController::class,'update'])->name('post.update');
 Route::post('/post/destroy/{id}', [PostController::class,'destroy'])->name('post.destroy');
 
+
+
+Route::get('/category', [CategoryController::class,'index'])->name('category.index');
+Route::get('/category/detail/{id}', [CategoryController::class,'detail'])->name('category.detail');
